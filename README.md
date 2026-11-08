@@ -68,7 +68,7 @@ Plik `.env` jest w `.gitignore`. Wzorzec: `.env.example`.
 
 ## Deploy
 
-- GitHub: repo `piterweg/avespedia` (branch `main`), CI w `.github/workflows/ci.yml`
+- GitHub: repo `piterweg/avespedia-next` (branch `main`), CI w `.github/workflows/ci.yml`
 - Vercel: import repo, ustaw `PAYLOAD_SECRET`, `DATABASE_URI` (Postgres), `NEXT_PUBLIC_SITE_URL`
 - Przelaczenie DNS dopiero po porownaniu staging vs produkcja (stary WP zostaje jako rollback)
 
