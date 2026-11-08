@@ -26,35 +26,33 @@ console.log('unikalnych obrazow w tresci: ' + urls.size)
 
 let created = 0
 let failed = 0
+let processed = 0
+
 for (const url of urls) {
   const name = decodeURIComponent(url.split('/').pop() || '')
   if (!name || byName.has(name)) continue
   try {
-    const response = await fetch(url)
-    if (!response.ok) {
-      failed += 1
-      continue
-    }
+    const response = await fetch(url, { signal: AbortSignal.timeout(20000) })
+    if (!response.ok) throw new Error('HTTP ' + response.status)
     const buffer = Buffer.from(await response.arrayBuffer())
     const doc: any = await payload.create({
       collection: 'media',
-      data: {
-        sourceUrl: url,
-        alt: '',
-        file: {
-          data: buffer,
-          mimetype: response.headers.get('content-type') || 'image/webp',
-          name,
-          size: buffer.length,
-        },
+      data: { sourceUrl: url, alt: '' },
+      file: {
+        data: buffer,
+        mimetype: response.headers.get('content-type') || 'image/webp',
+        name,
+        size: buffer.length,
       },
     })
     if (doc.url) byName.set(name, doc.url)
     created += 1
-    if (created % 50 === 0) console.log('pobrano ' + created + ' nowych / ' + urls.size)
   } catch (error) {
     failed += 1
+    if (failed <= 5) console.log('ERR ' + url + ' :: ' + String((error as Error).message).slice(0, 160))
   }
+  processed += 1
+  if (processed % 25 === 0) console.log('postep ' + processed + ' (nowe ' + created + ', bledy ' + failed + ')')
 }
 
 console.log('DONE created=' + created + ' failed=' + failed)
