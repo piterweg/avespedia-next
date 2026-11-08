@@ -28,6 +28,7 @@ export const Articles: CollectionConfig = {
     {
       name: 'legacyHtml',
       type: 'textarea',
+      maxLength: 500000,
       admin: { description: 'HTML zaimportowany z WordPressa (widok publiczny)' },
     },
     { name: 'publishedAt', type: 'date' },

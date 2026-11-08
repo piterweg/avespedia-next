@@ -193,7 +193,7 @@ async function main(): Promise<void> {
         updatedAtWp: post.modified,
         wpId: post.id,
         legacyUrl: post.link,
-        categories: categoryIds,
+        categories: categoryIds as number[],
         ...(mediaId ? { featuredImage: mediaId } : {}),
         seo: { title: seoTitle, description: seoDescription },
         _status: 'published',
