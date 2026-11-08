@@ -155,6 +155,7 @@ async function main(): Promise<void> {
 
   let imported = 0
   let skipped = 0
+  let failed = 0
   const source = limit > 0 ? posts.slice(0, limit) : posts
 
   for (const post of source) {
@@ -179,7 +180,8 @@ async function main(): Promise<void> {
       ? stripTags(post.aioseo_head_json.description)
       : undefined
 
-    await payload.create({
+    try {
+      await payload.create({
       collection: 'articles',
       data: {
         title: decodeEntities(post.title?.rendered || 'Bez tytulu'),
@@ -196,12 +198,18 @@ async function main(): Promise<void> {
         seo: { title: seoTitle, description: seoDescription },
         _status: 'published',
       },
-    })
-    imported += 1
+      })
+      imported += 1
+    } catch (error) {
+      failed += 1
+      const detail = (error as { data?: { errors?: unknown } }).data?.errors
+      console.error('FAIL ' + post.slug + ' :: ' + JSON.stringify(detail ?? (error as Error).message))
+      continue
+    }
     if (imported % 25 === 0) console.log('articles imported: ' + imported)
   }
 
-  console.log('DONE imported=' + imported + ' skipped=' + skipped + ' totalInWp=' + posts.length)
+  console.log('DONE imported=' + imported + ' skipped=' + skipped + ' failed=' + failed + ' totalInWp=' + posts.length)
   process.exit(0)
 }
 

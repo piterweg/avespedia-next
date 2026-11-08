@@ -1,25 +1,27 @@
 # Plan migracji avespedia.com
 
-## Faza 1 - fundament (teraz)
-- [x] repo Next 16 + Payload 3 (SQLite lokalnie)
-- [x] model tresci: articles, species, categories, media, users
-- [ ] import 922 wpisow z WP REST API
-- [ ] frontend: home, artykul, archiwum, katalog gatunkow
+## Status: fundament gotowy, tresc zaimportowana
 
-## Faza 2 - SEO bez strat
-- [ ] slugi 1:1 z WordPressem (bez zmiany URL)
-- [ ] sitemap.xml generowana z bazy
-- [ ] JSON-LD (Article, BreadcrumbList, FAQPage)
-- [ ] redirects.json + 301 dla starych sciezek `/category/*`, `/author/*`, `/wp-content/uploads/*`
-- [ ] porownanie staging vs produkcja przed przelaczeniem DNS
+### Zrobione
+- [x] repo Next 16 + Payload 3.93 (SQLite lokalnie), panel /admin dziala
+- [x] model tresci: articles, species, categories, media, users, site-settings
+- [x] `wp:fetch` - 922 wpisy, 46 kategorii, 2 strony, 902 media
+- [x] `wp:import` - kategorie + media + artykuly (idempotentne po `wpId`)
+- [x] frontend: home, artykul, archiwum, kategoria, katalog gatunkow
+- [x] SEO: sitemap, robots, JSON-LD, canonical, 49 x 301 (redirects.json)
+- [x] `wp:fix-assets` - przepisanie obrazow z WP na lokalne
+- [x] git + pierwszy commit, CI workflow
 
-## Faza 3 - produkcja
-- [ ] Postgres (Neon) + storage obrazow (Cloudflare R2)
-- [ ] Vercel/Node hosting, ISR zamiast force-dynamic
-- [ ] analityka + consent
-- [ ] GitHub: repo + CI (build) + deploy
+### Nastepne
+- [ ] Postgres + R2 na produkcje
+- [ ] ISR zamiast force-dynamic
+- [ ] zasilenie `species` (katalog gatunkow)
+- [ ] smoke testy + Lighthouse
+- [ ] staging na subdomenie -> porownanie -> przelaczenie DNS
+- [ ] wylaczenie WordPressa po 2-4 tygodniach obserwacji
 
-## Decyzje
-- Slug artykulow = stary slug WP (zero ryzyka SEO).
-- Tresc z WP trzymana jako `legacyHtml` do czasu recznej normalizacji do Lexical.
-- Baza lokalna SQLite, produkcyjnie Postgres - import jest odtwarzalny.
+## Zasady
+- Slug artykulu = stary slug WP (zero ryzyka SEO).
+- Tresc z WP jako `legacyHtml` do czasu normalizacji do Lexical.
+- Baza lokalna SQLite, produkcyjnie Postgres - import odtwarzalny, wiec baza jest jednorazowa.
+- Nie usuwamy WordPressa do czasu, az nowy serwis postoi na produkcji 2-4 tygodnie.
