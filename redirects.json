@@ -1,0 +1,247 @@
+[
+  {
+    "source": "/category/1",
+    "destination": "/categoria/1",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves",
+    "destination": "/categoria/aves",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/aves-acuaticas",
+    "destination": "/categoria/aves-acuaticas",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/aves-del-paraiso",
+    "destination": "/categoria/aves-del-paraiso",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/behavior-and-characteristics",
+    "destination": "/categoria/behavior-and-characteristics",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts",
+    "destination": "/categoria/bird-facts",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-trapping",
+    "destination": "/categoria/bird-trapping",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/birds-in-general",
+    "destination": "/categoria/birds-in-general",
+    "permanent": true
+  },
+  {
+    "source": "/category/blog",
+    "destination": "/categoria/blog",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/cardenal-norteno",
+    "destination": "/categoria/cardenal-norteno",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/chicken",
+    "destination": "/categoria/chicken",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/colibries",
+    "destination": "/categoria/colibries",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/conservation-and-ecology",
+    "destination": "/categoria/conservation-and-ecology",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/cultural-significance",
+    "destination": "/categoria/cultural-significance",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/duck",
+    "destination": "/categoria/duck",
+    "permanent": true
+  },
+  {
+    "source": "/category/list-of-birds/ducks",
+    "destination": "/categoria/ducks",
+    "permanent": true
+  },
+  {
+    "source": "/category/especies",
+    "destination": "/categoria/especies",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/gallinas",
+    "destination": "/categoria/gallinas",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation",
+    "destination": "/categoria/geographical-representation",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/goose",
+    "destination": "/categoria/goose",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/gorriones",
+    "destination": "/categoria/gorriones",
+    "permanent": true
+  },
+  {
+    "source": "/category/guia-de-aves",
+    "destination": "/categoria/guia-de-aves",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/guinea-fowl",
+    "destination": "/categoria/guinea-fowl",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/kiwi",
+    "destination": "/categoria/kiwi",
+    "permanent": true
+  },
+  {
+    "source": "/category/list-of-birds",
+    "destination": "/categoria/list-of-birds",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/loros",
+    "destination": "/categoria/loros",
+    "permanent": true
+  },
+  {
+    "source": "/category/naturaleza/murcielagos",
+    "destination": "/categoria/murcielagos",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation/national-bird-of-argentina",
+    "destination": "/categoria/national-bird-of-argentina",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation/national-bird-of-germany",
+    "destination": "/categoria/national-bird-of-germany",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation/national-bird-of-india",
+    "destination": "/categoria/national-bird-of-india",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation/national-bird-of-italy",
+    "destination": "/categoria/national-bird-of-italy",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/geographical-representation/national-bird-of-russia",
+    "destination": "/categoria/national-bird-of-russia",
+    "permanent": true
+  },
+  {
+    "source": "/category/naturaleza",
+    "destination": "/categoria/naturaleza",
+    "permanent": true
+  },
+  {
+    "source": "/category/north-american-birds",
+    "destination": "/categoria/north-american-birds",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/palomas",
+    "destination": "/categoria/palomas",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/patos",
+    "destination": "/categoria/patos",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry",
+    "destination": "/categoria/poultry",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/prey-birds",
+    "destination": "/categoria/prey-birds",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/quails",
+    "destination": "/categoria/quails",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/reinitas",
+    "destination": "/categoria/reinitas",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/reproduction-and-life-cycle",
+    "destination": "/categoria/reproduction-and-life-cycle",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/seagull",
+    "destination": "/categoria/seagull",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/specialized-topics",
+    "destination": "/categoria/specialized-topics",
+    "permanent": true
+  },
+  {
+    "source": "/category/bird-facts/specific-bird-species",
+    "destination": "/categoria/specific-bird-species",
+    "permanent": true
+  },
+  {
+    "source": "/category/aves/tropical-birds",
+    "destination": "/categoria/tropical-birds",
+    "permanent": true
+  },
+  {
+    "source": "/category/poultry/turkey-bird",
+    "destination": "/categoria/turkey-bird",
+    "permanent": true
+  },
+  {
+    "source": "/author/:path*",
+    "destination": "/articulos",
+    "permanent": true
+  },
+  {
+    "source": "/page/:path*",
+    "destination": "/articulos",
+    "permanent": true
+  },
+  {
+    "source": "/especies-de-aves",
+    "destination": "/especies",
+    "permanent": true
+  }
+]

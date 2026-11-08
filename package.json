@@ -1,0 +1,41 @@
+{
+  "name": "avespedia",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Avespedia - encyklopedia ptakow na Next.js + Payload 3",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "payload": "payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap",
+    "wp:fetch": "node scripts/wp-fetch.mjs",
+    "wp:import": "node scripts/wp-import.ts",
+    "wp:fix-assets": "node scripts/fix-assets.ts",
+    "seo:redirects": "node scripts/gen-redirects.mjs",
+    "seed": "node scripts/seed-user.ts"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "^3.93.0",
+    "@payloadcms/next": "^3.93.0",
+    "@payloadcms/richtext-lexical": "^3.93.0",
+    "graphql": "^16.15.0",
+    "next": "^16.4.5",
+    "payload": "^3.93.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "dotenv": "^18.0.9",
+    "tailwindcss": "^4.3.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

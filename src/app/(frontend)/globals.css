@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+:root {
+  --ink: #10231c;
+  --paper: #fbfaf6;
+  --moss: #1f6f4a;
+  --sand: #e9e3d5;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.prose-wp h2 { font-size: 1.6rem; font-weight: 700; margin: 2rem 0 0.75rem; }
+.prose-wp h3 { font-size: 1.25rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+.prose-wp p { margin: 0.9rem 0; line-height: 1.75; }
+.prose-wp ul { list-style: disc; padding-left: 1.5rem; margin: 0.9rem 0; }
+.prose-wp ol { list-style: decimal; padding-left: 1.5rem; margin: 0.9rem 0; }
+.prose-wp li { margin: 0.35rem 0; line-height: 1.7; }
+.prose-wp img { border-radius: 0.75rem; margin: 1.25rem 0; max-width: 100%; height: auto; }
+.prose-wp a { color: var(--moss); text-decoration: underline; }
+.prose-wp blockquote { border-left: 3px solid var(--moss); padding-left: 1rem; font-style: italic; margin: 1rem 0; }
+.prose-wp hr { border: 0; border-top: 1px solid var(--sand); margin: 2rem 0; }

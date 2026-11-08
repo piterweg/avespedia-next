@@ -1,0 +1,14 @@
+﻿node_modules/
+.next/
+out/
+.env
+.env.local
+media/
+data/wp/
+avespedia.db
+avespedia.db-*
+.npm-cache/
+*.log
+.DS_Store
+next-env.d.ts
+src/payload-types.ts
