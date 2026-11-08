@@ -1,7 +1,7 @@
 # Avespedia (Next.js 16 + Payload 3)
 
 Nowa wersja https://avespedia.com/ - migracja z WordPressa na Next.js z panelem Payload 3.
-Zrodlo tresci: 922 wpisy, 46 kategorii, 902 obrazy z WP REST API.
+Zrodlo tresci: 922 wpisy, 46 kategorii, 2962 obrazy (featured + obrazy z tresci).
 
 ## Quickstart
 
@@ -52,7 +52,7 @@ Plik `.env` jest w `.gitignore`. Wzorzec: `.env.example`.
 - `redirects.json`: 49 przekierowan 301 (`/category/*` -> `/categoria/*`, `/author/*`, `/page/*`)
 - `sitemap.xml` i `robots.txt` generowane z bazy
 - JSON-LD `BlogPosting` + `BreadcrumbList` na kazdym artykule
-- `scripts/fix-assets.ts` przepisuje obrazy w tresci z `avespedia.com/wp-content/uploads/*`
+- `npm run wp:inline-media` + `npm run wp:localize-images` pobieraja obrazy z tresci i przepisuja URL-e z `avespedia.com/wp-content/uploads/*`
   na lokalne `/api/media/file/*` (trzeba uruchomic po imporcie!)
 
 ## Czego jeszcze brakuje (kolejne kroki)

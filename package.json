@@ -13,7 +13,7 @@
     "generate:importmap": "payload generate:importmap",
     "wp:fetch": "node scripts/wp-fetch.mjs",
     "wp:import": "node scripts/wp-import.ts",
-    "wp:fix-assets": "node scripts/fix-assets.ts",
+    "wp:localize-images": "node scripts/localize-images.ts",
     "wp:inline-media": "node scripts/import-inline-media.ts",
     "seo:redirects": "node scripts/gen-redirects.mjs",
     "seed": "node scripts/seed-user.ts"
